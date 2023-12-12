@@ -1,7 +1,5 @@
 *.elf
 *.bin
-*.o
-*.a
 cmake_install.cmake
 .ninja_*
 build.ninja
