@@ -21,13 +21,6 @@
 typedef void *ScePthread;
 typedef void *ScePthreadAttr;
 
-struct OrbisKernelSwVersion {
-    uint64_t pad0;
-    char version_str[0x1C];
-    uint32_t version;
-    uint64_t pad1;
-};
-
 int libkernel_init();
 
 // ==================================================
@@ -195,7 +188,7 @@ _Fn_(uint64_t   , sceKernelClearGameDirectMemory,               void);
 _Fn_(uint64_t   , sceKernelClearMaxSocPowerConsumption,         void);
 _Fn_(uint64_t   , sceKernelClockGetres,                         void);
 _Fn_(uint64_t   , sceKernelClockGettime,                        void);
-_Fn_(uint64_t   , sceKernelClose,                               int fd);
+_Fn_(uint64_t   , sceKernelClose,                               void);
 _Fn_(uint64_t   , sceKernelCloseEport,                          void);
 _Fn_(uint64_t   , sceKernelCloseEventFlag,                      void);
 _Fn_(uint64_t   , sceKernelCloseSema,                           void);
@@ -340,7 +333,7 @@ _Fn_(uint64_t   , sceKernelGetProcessTimeCounter,               void);
 _Fn_(uint64_t   , sceKernelGetProcessTimeCounterFrequency,      void);
 _Fn_(uint64_t   , sceKernelGetProductCode,                      void);
 _Fn_(uint64_t   , sceKernelGetProductStr,                       void);
-_Fn_(uint64_t   , sceKernelGetProsperoSystemSwVersion,          struct OrbisKernelSwVersion *);
+_Fn_(uint64_t   , sceKernelGetProsperoSystemSwVersion,          void);
 _Fn_(uint64_t   , sceKernelGetPrtAperture,                      void);
 _Fn_(uint64_t   , sceKernelGetPs4SystemSwVersion,               void);
 _Fn_(uint64_t   , sceKernelGetPsmIntdevModeForRcmgr,            void);
@@ -365,7 +358,7 @@ _Fn_(uint64_t   , sceKernelGetSubsysId,                         void);
 _Fn_(uint64_t   , sceKernelGetSubsysSubId,                      void);
 _Fn_(uint64_t   , sceKernelGetSystemLevelDebuggerModeForRcmgr,  void);
 _Fn_(uint64_t   , sceKernelGetSystemSwBeta,                     void);
-_Fn_(uint64_t   , sceKernelGetSystemSwVersion,                  struct OrbisKernelSwVersion*);
+_Fn_(uint64_t   , sceKernelGetSystemSwVersion,                  void);
 _Fn_(uint64_t   , sceKernelGetThreadName,                       void);
 _Fn_(uint64_t   , sceKernelGetToolMemoryRange,                  void);
 _Fn_(uint64_t   , sceKernelGetTraceMemoryStats,                 void);
@@ -383,7 +376,7 @@ _Fn_(uint64_t   , sceKernelGetUtokenUseSoftwagnerForAcmgr,      void);
 _Fn_(uint64_t   , sceKernelGetUtokenUseSoftwagnerForRcmgr,      void);
 _Fn_(uint64_t   , sceKernelGetUtokenWeakenedPortRestrictionForRcmgr,    void);
 _Fn_(uint64_t   , sceKernelGetVrCaptureSize,                    void);
-_Fn_(uint64_t   , sceKernelGetdents,                            int fd, char *buf, int nbytes);
+_Fn_(uint64_t   , sceKernelGetdents,                            void);
 _Fn_(uint64_t   , sceKernelGetdirentries,                       void);
 _Fn_(uint64_t   , sceKernelGettimeofday,                        void);
 _Fn_(uint64_t   , sceKernelGettimezone,                         void);
@@ -485,7 +478,7 @@ _Fn_(uint64_t   , sceKernelNormalizePath,                       void);
 _Fn_(uint64_t   , sceKernelNotifyAppStateChanged,               void);
 _Fn_(uint64_t   , sceKernelNotifySystemSuspendResumeProgress,   void);
 _Fn_(uint64_t   , sceKernelNotifySystemSuspendStart,            void);
-_Fn_(uint64_t   , sceKernelOpen,                                char *path, int flags, int mode);
+_Fn_(uint64_t   , sceKernelOpen,                                void);
 _Fn_(uint64_t   , sceKernelOpenInternal,                        void);
 _Fn_(uint64_t   , sceKernelOpenEport,                           void);
 _Fn_(uint64_t   , sceKernelOpenEventFlag,                       void);
@@ -567,7 +560,7 @@ _Fn_(uint64_t   , sceKernelTraceMemoryTypeProtect,              void);
 _Fn_(uint64_t   , sceKernelTriggerEport,                        void);
 _Fn_(uint64_t   , sceKernelTriggerUserEvent,                    void);
 _Fn_(uint64_t   , sceKernelTruncate,                            void);
-_Fn_(uint64_t   , sceKernelUnlink,                              char *path);
+_Fn_(uint64_t   , sceKernelUnlink,                              void);
 _Fn_(uint64_t   , sceKernelUtimes,                              void);
 _Fn_(uint64_t   , sceKernelUuidCreate,                          void);
 _Fn_(uint64_t   , sceKernelVirtualQuery,                        void);
